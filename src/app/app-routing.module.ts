@@ -6,7 +6,7 @@ import {AcceuilComponent} from "./components/acceuil/acceuil.component";
 
 const routes: Routes = [
   { path: 'signUp', component:SignUpComponent },
-  { path: 'acceuil', component:AcceuilComponent},
+  { path: '', component:AcceuilComponent},
   { path: 'login', component:LoginComponent }
 
  ];
