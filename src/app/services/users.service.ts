@@ -12,7 +12,7 @@ export class UsersService {
     console.log("user from service");
     let formData =new FormData();
    formData.append('name',User.name);
-   formData.append('Prenom',User.mail);
+   formData.append('mail',User.mail);
    formData.append('password',User.password);
    console.log(formData)
     return this.httpClient.post<{message:string}>(`${this.USER_URL + '/api/addUser'}`, formData)
