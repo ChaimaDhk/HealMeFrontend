@@ -2,32 +2,32 @@
     <div class="title-text">
       <div class="title login">Login Form</div>
     </div>
- 
+
       <div class="form-inner">
         <form  class="login" [formGroup]="loginForm">
           <pre>
           </pre>
           <div class="field">
-            <input type="email" class="form-control"  placeholder="Enter mail"  formControlName="mail" 
+            <input type="email" class="form-control"  placeholder="Enter mail"  formControlName="mail"
             [ngClass]="{ 'is-invalid': submitted && f['mail'].errors }">
             <div *ngIf="submitted && f['mail'].errors" class="invalid-feedback">
                 <div *ngIf="f['mail'].errors['required']"> mail is required</div>
             </div>
         </div>
         <div class="field">
-         
-          <input type="password" class="form-control"  placeholder="Enter password"  formControlName="password" 
+
+          <input type="password" class="form-control"  placeholder="Enter password"  formControlName="password"
           [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
           <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
               <div *ngIf="f['password'].errors['required']"> password is required</div>
           </div>
         </div>
-         
+
           <div class="field btn">
             <div class="btn-layer"></div>
             <input type="submit" value="Login"  (click)="login(loginForm.value)" >
           </div>
-          <div class="signup-link">Create an account <a href="/signUp">Signup now</a></div>
+          <div class="signup-link">Create an account <a href="/signup">Signup now</a></div>
         </form>
     </div>
     </div>
