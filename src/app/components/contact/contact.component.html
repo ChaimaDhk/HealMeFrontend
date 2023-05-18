@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div id="contact" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 nopadding-lr dark-wrapper opaqued background-cover left-half">
+      <div class="dark-opaqued-half section-inner pad-sides-60 match-height" data-mh="promo-inner">
+        <h2 class="section-heading" >Contact <span class="theme-accent-color">Us</span> </h2>
+        <form id="contactform"
+              class="form-group main-contact-form col-md-12 col-lg-12  wow fadeIn" data-wow-delay="0.2s">
+          <label> Name</label>
+          <input style="background-color:rgba(170, 164, 164, 0.432);"type="text" formControlName="name" class="form-control"  />
+          <br><br>
+
+          <label>Email</label>
+          <input  style="background-color: rgba(170, 164, 164, 0.432);" type="text" formControlName="email" class="form-control"
+                  />
+
+          <br><br>
+
+          <label>message</label>
+          <textarea style="background-color: rgba(170, 164, 164, 0.432);" type="text" formControlName="message" class="form-control"></textarea>
+         <br>
+          <input class="btn btn-primary btn-white mt30 pull-right" type="submit" name="submit"
+                 value="Envoyer" />
+        </form>
+      </div>
+    </div>
+
+    <div class="col-sm-6 nopadding-lr dark-wrapper opaqued background-cover right-half" style="background-color: #fff">
+      <div class="dark-opaqued-half section-inner pad-sides-60 match-height text-right" data-mh="promo-inner">
+        <div id="mapwrapper"></div>
+        <br><br>
+        <div class="contact-info">
+          <p>
+            <i class="fa fa-map-marker"></i>  2 Rue de la Paix, 75002 Paris
+          </p>
+          <p>
+            <i class="fa fa-phone"></i>  +33 1 42 61 55 95
+          </p>
+          <p>
+            <i class="fa fa-fax"></i>  +33 1 42 61 55 96
+          <p>
+
+            <i class="fa fa-envelope"></i>
+          <br><br><br>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>
+

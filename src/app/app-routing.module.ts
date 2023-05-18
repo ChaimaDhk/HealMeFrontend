@@ -3,10 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import {AcceuilComponent} from "./components/acceuil/acceuil.component";
+import {ContactComponent} from "./components/contact/contact.component";
+import {AboutComponent} from "./components/about/about.component";
 
 const routes: Routes = [
   { path: 'signUp', component:SignUpComponent },
   { path: '', component:AcceuilComponent},
+  { path: 'contact', component:ContactComponent},
+  { path: 'about', component:AboutComponent},
   { path: 'login', component:LoginComponent }
 
  ];
