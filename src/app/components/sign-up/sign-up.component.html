@@ -1,32 +1,32 @@
-
+<app-navbar></app-navbar>
 <div class="wrapper" id="sign">
     <div class="title-text">
-   
+
       <div class="title signup">Signup Form</div>
     </div>
     <div class="form-container">
-   
+
       <div class="form-inner">
-     
+
         <form  class="signup"  [formGroup]="registerForm">
           <div class="field">
-            <input type="text" class="form-control"  placeholder="Enter name"  formControlName="name" 
+            <input type="text" class="form-control"  placeholder="Enter name"  formControlName="name"
             [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
             <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
                 <div *ngIf="f['name'].errors['required']"> name is required</div>
             </div>
           </div>
           <div class="field">
-           
-              <input type="email" class="form-control"  placeholder="Enter mail"  formControlName="mail" 
+
+              <input type="email" class="form-control"  placeholder="Enter mail"  formControlName="mail"
               [ngClass]="{ 'is-invalid': submitted && f['mail'].errors }">
               <div *ngIf="submitted && f['mail'].errors" class="invalid-feedback">
                   <div *ngIf="f['mail'].errors['required']"> mail is required</div>
               </div>
           </div>
           <div class="field">
-           
-            <input type="password" class="form-control"  placeholder="Enter password"  formControlName="password" 
+
+            <input type="password" class="form-control"  placeholder="Enter password"  formControlName="password"
             [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
             <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
                 <div *ngIf="f['password'].errors['required']"> password is required</div>
@@ -48,4 +48,5 @@
           <div class="signup-link">Already have an account? <a href="/login">Login</a></div>
         </form>
       </div>
-   
+    </div></div>
+   <app-footer></app-footer>
