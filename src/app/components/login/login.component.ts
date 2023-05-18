@@ -3,15 +3,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import axios from "axios";
 import {UsersService} from "../../services/users.service";
+import {MessageService} from "primeng/api";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers:[MessageService]
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted=false;
-  constructor(private router: Router,private formBuilder: FormBuilder ,private userService:UsersService) { }
+  constructor(private msg:MessageService,private router: Router,private formBuilder: FormBuilder ,private userService:UsersService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -20,6 +23,7 @@ export class LoginComponent implements OnInit {
     })
   }
   login(c:any){
+    window.alert("Hello");
   this.submitted = true;
   // stop here if form is invalid
 if (this.loginForm.invalid) {
@@ -28,16 +32,18 @@ if (this.loginForm.invalid) {
 const email = this.loginForm.value.mail;
 const password = this.loginForm.value.password;
 
+
 this.userService.Login(email,password).subscribe((res:any)=>{
   if(res["status"]===200){
-    this.router.navigate([''])
+     this.msg.add({key:'tc',severity:'success',summary:'success',detail:'Login avec success'});
+    window.alert("Hello");
+    this.router.navigateByUrl('');
   }else{
     //TODO : need to add a toast here from primeNg
-    alert(res["message"]);
+    this.msg.add({key:'tc',severity:'error',summary:'erreur',detail:'Login échouée'});
   }
 });
 
-console.log(c);
 }
 get f() { return this.loginForm.controls; }
   onReset() {

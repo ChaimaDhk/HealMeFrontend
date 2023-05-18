@@ -1,8 +1,9 @@
 <app-navbar></app-navbar>
 <div class="wrapper" id="sign">
+  <p-toast position="bottom-center" key="tc"></p-toast>
     <div class="title-text">
 
-      <div class="title signup">Signup Form</div>
+      <div class="title signup">S'inscrire</div>
     </div>
     <div class="form-container">
 
@@ -10,15 +11,22 @@
 
         <form  class="signup"  [formGroup]="registerForm">
           <div class="field">
-            <input type="text" class="form-control"  placeholder="Enter name"  formControlName="name"
+            <input type="text" class="form-control"  placeholder="Entrer nom"  formControlName="name"
             [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
             <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
                 <div *ngIf="f['name'].errors['required']"> name is required</div>
             </div>
           </div>
           <div class="field">
+            <input type="text" class="form-control"  placeholder="Entrer prenom"  formControlName="surname"
+                   [ngClass]="{ 'is-invalid': submitted && f['surname'].errors }">
+            <div *ngIf="submitted && f['surname'].errors" class="invalid-feedback">
+              <div *ngIf="f['surname'].errors['required']"> name is required</div>
+            </div>
+          </div>
+          <div class="field">
 
-              <input type="email" class="form-control"  placeholder="Enter mail"  formControlName="mail"
+              <input type="email" class="form-control"  placeholder="Entrer email"  formControlName="mail"
               [ngClass]="{ 'is-invalid': submitted && f['mail'].errors }">
               <div *ngIf="submitted && f['mail'].errors" class="invalid-feedback">
                   <div *ngIf="f['mail'].errors['required']"> mail is required</div>
@@ -26,14 +34,23 @@
           </div>
           <div class="field">
 
-            <input type="password" class="form-control"  placeholder="Enter password"  formControlName="password"
+            <input type="email" class="form-control"  placeholder="Entrer numero téléphone"  formControlName="phone"
+                   [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }">
+            <div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
+              <div *ngIf="f['phone'].errors['required']"> Phone is required</div>
+            </div>
+          </div>
+          <div class="field">
+
+            <input type="password" class="form-control"  placeholder="Entrer mot de passe"  formControlName="password"
             [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
             <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
                 <div *ngIf="f['password'].errors['required']"> password is required</div>
             </div>
           </div>
+
           <div class="field">
-            <input type="password" formControlName="confirm" class="form-control"  placeholder="confirm password"
+            <input type="password" formControlName="confirm" class="form-control"  placeholder="confirmer mot de passe"
             [ngClass]="{ 'is-invalid': submitted && f['confirm'].errors }" />
         <div *ngIf="submitted && f['confirm'].errors" class="invalid-feedback">
             <div *ngIf="f['confirm'].errors['required']">Confirm Password is required</div>
@@ -43,7 +60,7 @@
           <div class="field btn">
             <div class="btn-layer"></div>
             <input  type="submit" name="submit"
-            value="Sign Up"  (click)="signup(registerForm.value)"  style="margin-right: 45%;" />
+            value="S'inscrire"  (click)="signup(registerForm.value)"  style="margin-right: 45%;" />
           </div>
           <div class="signup-link">Already have an account? <a href="/login">Login</a></div>
         </form>

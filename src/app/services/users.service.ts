@@ -15,14 +15,19 @@ export class UsersService {
     console.log("user from service");
     const requestBody = {
       name: User.name,
-      mail: User.mail,
-      password: User.password
+      surname: User.surname,
+      email: User.email,
+      password: User.password,
+      phone: User.phone,
+      role: User.role
     };
     console.log(requestBody);
-    return this.httpClient.post<{ message: string }>(`${this.USER_URL}/Register`, requestBody);
+    return this.httpClient.post<any>(`${this.USER_URL+'Register'}`, requestBody);
   }
 
   public Login(email: any, password: any) {
+    console.log(email);
+    console.log(password);
     const requestBody = {
       email: email,
       password: password
