@@ -20,6 +20,9 @@ import {RatingModule} from "primeng/rating";
 import {TagModule} from "primeng/tag";
 import {DialogModule} from "primeng/dialog";
 import {CalendarModule} from "primeng/calendar";
+import { DoctorComponent } from './components/doctor/doctor.component';
+import {MenuModule} from "primeng/menu";
+import {ChartModule} from "primeng/chart";
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import {CalendarModule} from "primeng/calendar";
     FooterComponent,
     ContactComponent,
     AboutComponent,
-    ReservationComponent
+    ReservationComponent,
+    DoctorComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import {CalendarModule} from "primeng/calendar";
     RatingModule,
     TagModule,
     DialogModule,
-    CalendarModule
+    CalendarModule,
+    MenuModule,
+    ChartModule
 
   ],
   providers: [],

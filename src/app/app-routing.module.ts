@@ -6,6 +6,7 @@ import {AcceuilComponent} from "./components/acceuil/acceuil.component";
 import {ContactComponent} from "./components/contact/contact.component";
 import {AboutComponent} from "./components/about/about.component";
 import {ReservationComponent} from "./components/reservation/reservation.component";
+import {DoctorComponent} from "./components/doctor/doctor.component";
 
 const routes: Routes = [
   { path: 'signup', component:SignUpComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'contact', component:ContactComponent},
   { path: 'about', component:AboutComponent},
   { path: 'rendezvous', component:ReservationComponent},
+  { path: 'doctor', component:DoctorComponent},
   { path: 'login', component:LoginComponent }
 
  ];

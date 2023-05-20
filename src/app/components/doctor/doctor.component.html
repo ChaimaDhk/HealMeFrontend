@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<section id="doctor" class="top-border-me" >
+  <div class="section-inner">
+
+    <div class="container">
+      <div class="row">
+        <p-table>
+          <ng-template  pTemplate="header"  >
+              <div class="flex align-items-center text-primary">
+                <span class="pi pi-user mr-2"></span>
+                <span class="font-bold text-lg" class="tableau">{{userConnect.name |titlecase}}   {{userConnect.surname |titlecase}}</span>
+              </div>
+              <tr class="tableau">
+                <th>Nom du patient</th>
+                <th>Télephone</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th></th>
+              </tr>
+              <tr class="tableau">
+                <td>chaima</td>
+                <td>27128984</td>
+                <td>22/2/2023</td>
+                <td>11h</td>
+              <td><button type="button" pButton pRipple (click)="popup()" label="Consultation terminée" class="p-button-success"></button></td>
+
+              </tr>
+            </ng-template>
+        </p-table>
+      </div></div></div></section>
+<app-footer></app-footer>
+
