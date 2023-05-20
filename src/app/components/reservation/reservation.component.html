@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<section id="rendezvous" class="top-border-me" >
+  <div class="section-inner">
+
+    <div class="container">
+      <div class="row">
+      <p-table>
+        <ng-template  pTemplate="header">
+          <tr class="tableau">
+            <th>Nom</th>
+            <th>Télephone</th>
+            <th>Email</th>
+            <th>Spécialité</th>
+            <th>Avis</th>
+            <th style="width: 5rem"></th>
+          </tr>
+          <tr class="tableau">
+            <td>chaima</td>
+            <td>27128984</td>
+            <td>chaimadhakouani@gmail.com</td>
+            <td>dentiste</td>
+            <td><p-rating  [readonly]="true" [cancel]="false"></p-rating></td>
+             <td><button type="button" class="btn button-blue" (click)="popup()">Prendre Rendez-vous</button></td>
+
+          </tr>
+        </ng-template>
+
+
+
+      </p-table>
+
+      </div></div></div></section>
+<app-footer></app-footer>
+
