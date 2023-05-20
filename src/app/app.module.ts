@@ -13,6 +13,13 @@ import { AboutComponent } from './components/about/about.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ToastModule} from "primeng/toast";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ReservationComponent } from './components/reservation/reservation.component';
+import {TableModule} from "primeng/table";
+import {ButtonModule} from "primeng/button";
+import {RatingModule} from "primeng/rating";
+import {TagModule} from "primeng/tag";
+import {DialogModule} from "primeng/dialog";
+import {CalendarModule} from "primeng/calendar";
 
 @NgModule({
   declarations: [
@@ -23,7 +30,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     NavbarComponent,
     FooterComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,13 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FormsModule,
     HttpClientModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TableModule,
+    ButtonModule,
+    RatingModule,
+    TagModule,
+    DialogModule,
+    CalendarModule
 
   ],
   providers: [],
