@@ -1,0 +1,35 @@
+select{
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #2B2B2B;
+  padding: 8px 12px; /* Espacement interne du texte */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 4px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+
+}
+button{
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #2B2B2B;
+  padding: 8px 12px; /* Espacement interne du texte */
+  border: 1px solid ; /* Bordure */
+  border-radius: 4px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+  background-color: #0073e6;
+  font-family: bolder, serif;
+
+
+}
+input{
+
+  margin-left:2%;
+  margin-right: 2%;
+  width: 20%;
+  color: #2B2B2B;
+  padding: 8px 12px; /* Espacement interne du texte */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 4px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+
+}
