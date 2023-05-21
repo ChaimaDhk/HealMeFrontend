@@ -4,31 +4,45 @@
 
     <div class="container">
       <div class="row">
-      <p-table>
+      <p-table [value]="doctors">
         <ng-template  pTemplate="header">
           <tr class="tableau">
             <th>Nom</th>
+            <th>Prénom</th>
             <th>Télephone</th>
             <th>Email</th>
             <th>Spécialité</th>
             <th>Avis</th>
             <th style="width: 5rem"></th>
           </tr>
-          <tr class="tableau">
-            <td>chaima</td>
-            <td>27128984</td>
-            <td>chaimadhakouani@gmail.com</td>
-            <td>dentiste</td>
+          </ng-template>
+          <ng-template pTemplate="body" let-doctor>
+          <tr >
+            <th>{{doctor.name}}</th>
+            <th>{{doctor.surname}}</th>
+            <th>{{doctor.phone}}</th>
+            <th>{{doctor.email}}</th>
+            <th>{{doctor.speciality}}</th>
             <td><p-rating  [readonly]="true" [cancel]="false"></p-rating></td>
-             <td><button type="button" class="btn button-blue" (click)="popup()">Prendre Rendez-vous</button></td>
+             <td><button type="button" class="btn button-blue" (click)="showDialog(doctor)">Prendre Rendez-vous</button></td>
+             
 
           </tr>
-        </ng-template>
+          </ng-template>
 
 
 
       </p-table>
-
+        
+  
       </div></div></div></section>
+      <p-dialog [(visible)]="visibility" header="Etapes du Rendez-vous" [style]="{width: '1500px'}">
+       
+        <div class="card" style="color: aqua; width: auto;">
+          <p-toast></p-toast>
+          <p-steps [model]="items" [readonly]="false" [activeIndex]="activeIndex"></p-steps>
+        </div>
+        <router-outlet></router-outlet>        
+      </p-dialog>
 <app-footer></app-footer>
-
+```

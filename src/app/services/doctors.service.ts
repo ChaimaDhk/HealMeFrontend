@@ -12,7 +12,7 @@ export class DoctorsService {
   }
 
   public getAllDoctors() {
-    return this.httpClient.get<any[]>(`${this.USER_URL + '/getAllDoctors'}`);
+    return this.httpClient.get<any[]>(`${this.USER_URL + 'getAllDoctors'}`);
   }
 
   public addDoctor(Doc: any) {
@@ -26,9 +26,13 @@ export class DoctorsService {
       password: Doc.password
     };
 
-    return this.httpClient.post<any>(`${this.USER_URL}/AddDoctor`, requestBody);
+    return this.httpClient.post<any>(`${this.USER_URL}AddDoctor`, requestBody);
   }
-  public deleteDoctor(email:any){
-
+  /**
+   * setRendezvous
+rdv:any   */
+  public setRendezvous(rdv:any) {
+    
+     return this.httpClient.post<any>(`${this.USER_URL}SetRendezVous`, rdv);
   }
 }

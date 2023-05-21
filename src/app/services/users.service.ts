@@ -34,4 +34,7 @@ export class UsersService {
     }
     return this.httpClient.post<{ message: string }>(`${this.USER_URL + 'Login'}`, requestBody)
   }
+  public getAllUsers(){
+    return this.httpClient.get<any[]>(this.USER_URL+"getAllUsers");
+  }
 }

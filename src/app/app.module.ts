@@ -23,7 +23,14 @@ import {CalendarModule} from "primeng/calendar";
 import { DoctorComponent } from './components/doctor/doctor.component';
 import {MenuModule} from "primeng/menu";
 import {ChartModule} from "primeng/chart";
-
+import { PersonelComponent } from './components/steps/personel/personel.component';
+import { RdvComponent } from './components/steps/rdv/rdv.component';
+import { PaiementComponent } from './components/steps/paiement/paiement.component';
+import { ConfirmationComponent } from './components/steps/confirmation/confirmation.component';
+import {StepsModule} from "primeng/steps";
+import {CardModule} from "primeng/card";
+import{InputTextModule} from "primeng/inputtext";
+import {InputMaskModule} from "primeng/inputmask";
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +42,11 @@ import {ChartModule} from "primeng/chart";
     ContactComponent,
     AboutComponent,
     ReservationComponent,
-    DoctorComponent
+    DoctorComponent,
+    PersonelComponent,
+    RdvComponent,
+    PaiementComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +63,11 @@ import {ChartModule} from "primeng/chart";
     DialogModule,
     CalendarModule,
     MenuModule,
-    ChartModule
+    ChartModule,
+    StepsModule,
+    CardModule,
+    InputTextModule,
+    InputMaskModule
 
   ],
   providers: [],
