@@ -3580,11 +3580,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   list-style: none;
 }
 .nav > li {
-  position: relative;
+  position: fixed;
   display: block;
 }
 .nav > li > a {
-  position: relative;
+  position: fixed;
   display: block;
   padding: 10px 15px;
 }

@@ -19,17 +19,18 @@
           <input id="nom" type="text" pInputText [(ngModel)]="nom" name="nom" required>
           <label for="nom">Nom</label>
         </span>
-        <div *ngIf="nom.dirty && nom.errors?.required" class="p-error">
-          Nom est requis
-        </div>
+          <div *ngIf="submitted && f['nom'].errors" class="invalid-feedback">
+            <div *ngIf="f['nom'].errors['required']"> nom is required</div>
+          </div>
+
       </div>
       <div class="p-inputgroup">
         <span class="p-float-label">
           <input id="prenom" type="text" pInputText [(ngModel)]="prenom" name="prenom" required>
           <label for="prenom">Prenom</label>
         </span>
-        <div *ngIf="prenom.dirty && prenom.errors?.required" class="p-error">
-          Prenom est requis 
+        <div *ngIf="submitted && f['prenom'].errors" class="invalid-feedback">
+            <div *ngIf="f['prenom'].errors['required']"> prenom is required</div>
         </div>
       </div>
       <div class="p-inputgroup">
@@ -37,9 +38,9 @@
           <input id="email" type="text" pInputText [(ngModel)]="email" name="email" required>
           <label for="email">Email</label>
         </span>
-        <!-- TODO: ged el ngIF ya sa7by -->
-        <div *ngIf="email.dirty && email.errors?.required" class="p-error">
-          Email est requis
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']"> Email is required</div>
+
         </div>
       </div>
     </div>

@@ -565,7 +565,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .dropdown-menu {
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 0;
     z-index: 1000;
@@ -1303,7 +1303,7 @@ footer.white-wrapper .social-links li a {
 /*  17 -  TABS
 /*-----------------------------------------------------------------------------------*/
 .nav.nav-justified > li > a {
-    position: relative;
+    position: fixed;
 }
 
 .icon-tabs li:after {
@@ -1345,7 +1345,7 @@ footer.white-wrapper .social-links li a {
 }
 
 .nav.nav-justified > li > a > .quote {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0;
     opacity: 0;
@@ -1408,7 +1408,7 @@ footer.white-wrapper .social-links li a {
         font-size: 50px;
     }
 	.dropdown-menu:before {
-		position: absolute;
+		position: fixed;
 		top: -7px;
 		margin-right: -9px;
 		right: 40%;
@@ -1619,7 +1619,7 @@ footer.white-wrapper .social-links li a {
         width: 100% !important;
      }
      .navbar-default.navbar-fixed-top {
-        position: relative;
+        position: fixed;
         margin-bottom: 0;
      }
      .navbar-default .navbar-brand, .navbar-default .nav li a {
